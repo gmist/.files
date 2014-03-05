@@ -24,6 +24,14 @@ if [ "$unamestr" == "Darwin" ]; then
     echo "Oops... 'hg' was not found, install it now"
     brew install mercurial
   fi
+
+  echo "Check virtualenvwrapper..."
+  which virtualenvwrapper > /dev/null
+  if [ "$?" != "0" ]; then
+    echo "Oops... 'virtualenvwrapper' was not found, install it now"
+    brew install virtualenvwrapper
+  fi
+  
 else
   echo "TODO: Add ubuntu checker"
 fi
