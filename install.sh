@@ -9,8 +9,6 @@ if [ "$unamestr" == "Darwin" ]; then
   if [ "$?" != "0" ]; then
     echo "Oops... 'brew' was not found, install it now"
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  else
-    echo "Ok"
   fi
 
   echo "Check stow..."
