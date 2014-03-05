@@ -1,0 +1,34 @@
+[ui]
+username = Serg Baburin <serg.baburin@gmail.com>
+verbose = True
+ignore=~/.hgignore_global
+
+[diff]
+git=1
+
+[extdiff]
+cmd.vimdiff = mvim
+opts.vimdiff = -f '+next' '+execute "DirDiff" argv(0) argv(1)'
+
+[git]
+intree=1
+
+[extensions]
+churn=
+hgk=
+mq=
+record=
+graphlog=
+color=
+rebase=
+transplant=
+bookmarks=
+record=
+extdiff=
+pager=
+hggit=
+progress= 
+purge=
+
+[hooks]
+post-commit=~/.git_templates/hooks/post-commit

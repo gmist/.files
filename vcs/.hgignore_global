@@ -1,0 +1,12 @@
+syntax: glob
+
+*~
+.DS_Store
+.idea*
+.svn*
+ *.svn*
+*.git*
+.git*
+.ropeproject*
+*.pyc
+

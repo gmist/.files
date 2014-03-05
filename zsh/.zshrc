@@ -1,0 +1,111 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+unamestr=`uname -s`
+
+# --begin setup paths--
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/google_appengine:$PATH
+
+
+# PATH for OS X
+if [[ "$unamestr" == "Darwin" ]]; then 
+  # for homebrew python
+  export PATH=/usr/local/share/python:$PATH
+  export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+  export PATH=/usr/local/share/npm/bin:$PATH
+   
+  # Araxis Merge
+  export PATH=/Applications/Araxis\ Merge.app/Contents/Utilities:$PATH
+    
+  # SublimeText 2
+  export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
+    
+  #export PATH=/usr/local/opt/ruby/bin:$PATH
+  # http://stackoverflow.com/questions/6482738/installing-ruby-gems-not-working-with-home-brew
+  export PATH=$(cd $(which gem)/..; pwd):$PATH
+fi
+# --end setup paths--
+
+# --begin setup virtualenvwrapper--
+export WORKON_HOME=$HOME/.ve
+if [[ "$unamestr" == "Darwin" ]]; then
+  if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then  
+    source /usr/local/share/python/virtualenvwrapper.sh
+  fi
+fi
+if [[ "$unamestr" == "Linux" ]]; then
+  if [ -f /etc/bash_completion.d/virtualenvwrapper ]; then  
+    source /etc/bash_completion.d/virtualenvwrapper
+  fi
+fi
+# --end setup virtualenvwrapper--
+
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# --begin vim aliases--
+if [[ "$unamestr" == "Darwin" ]]; then 
+  export VISUAL='mvim -f'
+  alias vi='mvim -v'
+  alias vim='mvim -v'
+  alias vimdiff='mvimdiff -v'
+else
+  alias vi='vim -v'
+  alias vim='vim -v'
+  alias vimdiff='vimdiff -v'
+fi
+# --end vim--
+
+export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+
+# fix include path for libxml2
+export C_INCLUDE_PATH=/usr/local/Cellar/libxml2/2.9.1/include/libxml2:$C_INCLUDE_PATH
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="gnzh"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git python osx mercurial virtualenvwrapper ruby vagrant brew forklift npm)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
