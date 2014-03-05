@@ -46,6 +46,7 @@ for dir in */; do
   fi
 done
 
+cd ~
 if [ ! -d ~/.oh-my-zsh ]; then
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 fi
