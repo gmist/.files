@@ -16,11 +16,18 @@ if [ "$unamestr" == "Darwin" ]; then
   echo "Check stow..."
   which stow > /dev/null
   if [ "$?" != "0" ]; then
-    echo "Oops... 'stow' was not found, instll in now"
+    echo "Oops... 'stow' was not found, install it now"
     brew install stow
   fi
+
+  echo "Check mercurial..."
+  which hg > /dev/null
+  if [ "$?" != "0" ]; then
+    echo "Oops... 'hg' was not found, install it now"
+    brew install mercurial
+  fi
 else
-  echo "TODO: Add ubuntu"
+  echo "TODO: Add ubuntu checker"
 fi
 
 for dir in */; do
