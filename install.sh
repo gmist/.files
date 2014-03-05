@@ -25,11 +25,18 @@ if [ "$unamestr" == "Darwin" ]; then
     brew install mercurial
   fi
 
+  echo "Check pip..."
+  which pip > /dev/null
+  if [ "$?" != "0" ]; then
+    echo "Oops... 'pip' was not found, install it now"
+    sudo easy_install pip
+  fi
+
   echo "Check virtualenvwrapper..."
   which virtualenvwrapper > /dev/null
   if [ "$?" != "0" ]; then
     echo "Oops... 'virtualenvwrapper' was not found, install it now"
-    brew install virtualenvwrapper
+    sudo pip install virtualenvwrapper
   fi
   
 else
