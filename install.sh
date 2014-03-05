@@ -38,6 +38,7 @@ fi
 
 git clone https://github.com/gmist/.files.git
 
+cd .files
 for dir in */; do
   if [ -d "$dir" ]; then
     echo "Install ${dir}"
