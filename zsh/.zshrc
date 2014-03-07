@@ -29,7 +29,7 @@ if [[ "$unamestr" == "Darwin" ]]; then
   export PATH=/Applications/Araxis\ Merge.app/Contents/Utilities:$PATH
     
   # SublimeText 2
-  export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
+  alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
     
   #export PATH=/usr/local/opt/ruby/bin:$PATH
   # http://stackoverflow.com/questions/6482738/installing-ruby-gems-not-working-with-home-brew
