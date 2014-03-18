@@ -35,6 +35,9 @@ if [[ "$unamestr" == "Darwin" ]]; then
   # http://stackoverflow.com/questions/6482738/installing-ruby-gems-not-working-with-home-brew
   export PATH=$(cd $(which gem)/..; pwd):$PATH
 fi
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
 # --end setup paths--
 
 # --begin setup virtualenvwrapper--
