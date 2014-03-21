@@ -21,7 +21,6 @@ export PATH=/usr/local/google_appengine:$PATH
 # PATH for OS X
 if [[ "$unamestr" == "Darwin" ]]; then 
   # for homebrew python
-  export PATH=/usr/local/share/python:$PATH
   export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
   export PATH=/usr/local/share/npm/bin:$PATH
    
