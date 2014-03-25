@@ -44,6 +44,8 @@ export WORKON_HOME=$HOME/.ve
 if [[ "$unamestr" == "Darwin" ]]; then
   if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then  
     source /usr/local/share/python/virtualenvwrapper.sh
+  elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then  
+    source /usr/local/bin/virtualenvwrapper.sh
   fi
 fi
 if [[ "$unamestr" == "Linux" ]]; then
@@ -113,7 +115,20 @@ ZSH_THEME="gnzh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python osx mercurial virtualenvwrapper ruby vagrant brew forklift npm meteor pip)
+plugins=(
+  brew 
+  git
+  forklift 
+  mercurial
+  meteor 
+  npm 
+  osx
+  pip
+  python
+  ruby 
+  vagrant 
+  virtualenvwrapper
+)
 
 source $ZSH/oh-my-zsh.sh
 
