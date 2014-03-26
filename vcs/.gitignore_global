@@ -3,3 +3,4 @@
 .idea
 .ropeproject
 *.orig
+*.py[cod]
