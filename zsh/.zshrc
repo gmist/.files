@@ -21,7 +21,11 @@ export PATH=/usr/local/google_appengine:$PATH
 # PATH for OS X
 if [[ "$unamestr" == "Darwin" ]]; then 
   # for homebrew python
-  export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+  if [ -d /usr/local/lib/python2.7/site-packages ]; then
+    export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+  else
+    export PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
+  fi
   export PATH=/usr/local/share/npm/bin:$PATH
    
   # Araxis Merge
