@@ -42,6 +42,9 @@ if [[ "$unamestr" == "Darwin" ]]; then
   #export PATH=/usr/local/opt/ruby/bin:$PATH
   # http://stackoverflow.com/questions/6482738/installing-ruby-gems-not-working-with-home-brew
   export PATH=$(cd $(which gem)/..; pwd):$PATH
+
+  # Docker daemon, please set:
+  export DOCKER_HOST=tcp://localhost:4243
 fi
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
@@ -126,8 +129,9 @@ ZSH_THEME="gnzh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
   brew 
-  git
+  docker
   forklift 
+  git
   mercurial
   meteor 
   npm 
