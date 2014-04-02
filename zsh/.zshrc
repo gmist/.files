@@ -26,6 +26,11 @@ if [[ "$unamestr" == "Darwin" ]]; then
   else
     export PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
   fi
+
+  # command to fix dublicates in Open With menu
+  alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
+
+  # NPM
   export PATH=/usr/local/share/npm/bin:$PATH
    
   # Araxis Merge
