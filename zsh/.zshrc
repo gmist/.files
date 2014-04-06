@@ -132,6 +132,8 @@ plugins=(
   docker
   forklift 
   git
+  gitignore
+  history
   mercurial
   meteor 
   npm 
