@@ -20,12 +20,6 @@ export PATH=/usr/local/google_appengine:$PATH
 
 # PATH for OS X
 if [[ "$unamestr" == "Darwin" ]]; then 
-  # for homebrew python
-  if [ -d /usr/local/lib/python2.7/site-packages ]; then
-    export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-  else
-    export PYTHONPATH="/Library/Python/2.7/site-packages:$PYTHONPATH"
-  fi
 
   # command to fix dublicates in Open With menu
   alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
