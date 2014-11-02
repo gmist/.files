@@ -3,7 +3,7 @@
 find . -name \.DS_Store -type f -delete
 unamestr=`uname -s`
 
-if [ "$unamestr" == "Darwin" ]; then 
+if [ "$unamestr" == "Darwin" ]; then
   echo "Check homebrew..."
   which brew > /dev/null
   if [ "$?" != "0" ]; then
@@ -38,11 +38,12 @@ if [ "$unamestr" == "Darwin" ]; then
     echo "Oops... 'virtualenvwrapper' was not found, install it now"
     sudo pip install virtualenvwrapper
   fi
-  
+
 else
   echo "TODO: Add ubuntu checker"
 fi
 
+cd ~
 git clone https://github.com/gmist/.files.git
 
 cd .files
