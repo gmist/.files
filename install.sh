@@ -63,5 +63,13 @@ if [ ! -d ~/.ve ]; then
 fi
 
 if [ ! -d ~/.commshots ]; then
-  mkdir ~/.commshots
+  ln -s ~/Dropbox/commshots ~/.commshots
+fi
+
+if [! -d ~/.atom ]; then
+  ln -s ~/Dropbox/Apps/.atom ~/.atom
+fi
+
+if [! -d ~/Library/Application\ Support/Sublime\ Text\ 3 ]; then
+  ln -s ~/Dropbox/Apps/Sublime\ Text\ 3 ~/Library/Application\ Support/Sublime\ Text\ 3
 fi
