@@ -19,19 +19,19 @@ export PATH=/usr/local/google_appengine:$PATH
 
 
 # PATH for OS X
-if [[ "$unamestr" == "Darwin" ]]; then 
+if [[ "$unamestr" == "Darwin" ]]; then
   # command to fix dublicates in Open With menu
   alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 
   # NPM
   export PATH=/usr/local/share/npm/bin:$PATH
-   
+
   # Araxis Merge
   export PATH=/Applications/Araxis\ Merge.app/Contents/Utilities:$PATH
-    
+
   # SublimeText 2
   alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-    
+
   # Docker daemon, please set:
   export DOCKER_HOST=tcp://localhost:4243
 fi
@@ -44,14 +44,14 @@ fi
 # --begin setup virtualenvwrapper--
 export WORKON_HOME=$HOME/.ve
 if [[ "$unamestr" == "Darwin" ]]; then
-  if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then  
+  if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
     source /usr/local/share/python/virtualenvwrapper.sh
-  elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then  
+  elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
   fi
 fi
 if [[ "$unamestr" == "Linux" ]]; then
-  if [ -f /etc/bash_completion.d/virtualenvwrapper ]; then  
+  if [ -f /etc/bash_completion.d/virtualenvwrapper ]; then
     source /etc/bash_completion.d/virtualenvwrapper
   fi
 fi
@@ -60,7 +60,7 @@ fi
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # --begin vim aliases--
-if [[ "$unamestr" == "Darwin" ]]; then 
+if [[ "$unamestr" == "Darwin" ]]; then
   export VISUAL='mvim -f'
   alias vi='mvim -v'
   alias vim='mvim -v'
@@ -71,8 +71,6 @@ else
   alias vimdiff='vimdiff -v'
 fi
 # --end vim--
-
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 
 # fix include path for libxml2
 export C_INCLUDE_PATH=/usr/local/Cellar/libxml2/2.9.1/include/libxml2:$C_INCLUDE_PATH
@@ -93,20 +91,20 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-  brew 
+  brew
   docker
-  forklift 
+  forklift
   git
   gitignore
   history
   mercurial
-  meteor 
-  npm 
+  meteor
+  npm
   osx
   pip
   python
-  ruby 
-  vagrant 
+  ruby
+  vagrant
   virtualenvwrapper
 )
 
@@ -114,4 +112,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
