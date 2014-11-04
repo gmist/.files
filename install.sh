@@ -43,10 +43,17 @@ else
   echo "TODO: Add ubuntu checker"
 fi
 
-cd ~
-git clone https://github.com/gmist/.files.git
 
-cd .files
+if [ ! -d ~/.files ]; then
+  cd ~
+  git clone https://github.com/gmist/.files.git
+else
+  cd ~/.files
+  git pull
+fi
+
+
+cd ~/.files
 for dir in */; do
   if [ -d "$dir" ]; then
     echo "Install ${dir}"
