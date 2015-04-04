@@ -13,7 +13,7 @@
   prompt = false
 [core]
   editor = vim
-	excludesfile = /Users/serg/.gitignore_global
+	excludesfile = ~/.gitignore_global
   quotepath = false
 [alias]
   # https://github.com/garybernhardt/dotfiles/blob/master/.gitconfig
