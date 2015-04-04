@@ -33,7 +33,9 @@ if [[ "$unamestr" == "Darwin" ]]; then
   alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
   # Docker daemon, please set:
-  export DOCKER_HOST=tcp://localhost:4243
+  export DOCKER_HOST=tcp://192.168.59.103:2376
+  export DOCKER_CERT_PATH=/Users/serg/.boot2docker/certs/boot2docker-vm
+  export DOCKER_TLS_VERIFY=1
 fi
 
 if which ruby >/dev/null && which gem >/dev/null; then
@@ -112,3 +114,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
