@@ -94,6 +94,7 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
   brew
+  brew-cask
   docker
   forklift
   git
