@@ -15,7 +15,6 @@ export LC_ALL=
 # --begin setup paths--
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/google_appengine:$PATH
 
 
 # PATH for OS X
