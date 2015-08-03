@@ -66,6 +66,5 @@
   keepBackup = false
 [git-tmbundle]
   gitnub-path = /Applications/GitHub.app
-  gitx-path = /Applications/GitX.app
 [push]
   default = current
