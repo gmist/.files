@@ -34,7 +34,8 @@ if [[ "$unamestr" == "Darwin" ]]; then
   # setup GOPATH
   export GOPATH=~/Develop/go
   export GOROOT=/usr/local/opt/go/libexec
-  export PATH=$PATH:$GOPATH/bin
+  export GOBIN=$GOPATH/bin
+  export PATH=$PATH:$GOBIN
   export PATH=$PATH:$GOROOT/bin
 fi
 
