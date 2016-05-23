@@ -64,11 +64,12 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # --begin vim aliases--
 if [[ "$unamestr" == "Darwin" ]]; then
-  export VISUAL='mvim -f'
-  alias vi='mvim -v'
-  alias vim='mvim -v'
-  alias vimdiff='mvimdiff -v'
+  export VISUAL='nvim'
+  alias vi='nvim'
+  alias vim='nvim'
+  alias vimdiff='nvim -d'
 else
+  export VISUAL='vim -v'
   alias vi='vim -v'
   alias vim='vim -v'
   alias vimdiff='vimdiff -v'
@@ -121,3 +122,5 @@ if [ -d '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk' ]
   source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
   source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
