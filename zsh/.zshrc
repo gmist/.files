@@ -32,11 +32,10 @@ if [[ "$unamestr" == "Darwin" ]]; then
   alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
   # setup GOPATH
-  export GOPATH=~/Develop/go
+  export GOPATH=~/Develop/go/external:~/Develop/go/my
+  export GOBIN=~/Develop/go/bin
   export GOROOT=/usr/local/opt/go/libexec
-  export GOBIN=$GOPATH/bin
-  export PATH=$PATH:$GOBIN
-  export PATH=$PATH:$GOROOT/bin
+  export PATH=$PATH:$GOBIN:$GOROOT/bin
 fi
 
 if which ruby >/dev/null && which gem >/dev/null; then
