@@ -100,6 +100,7 @@ plugins=(
   forklift
   git
   gitignore
+  golang
   history
   mercurial
   meteor
