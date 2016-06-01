@@ -63,10 +63,10 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # --begin vim aliases--
 if [[ "$unamestr" == "Darwin" ]]; then
-  export VISUAL='nvim'
-  alias vi='nvim'
-  alias vim='nvim'
-  alias vimdiff='nvim -d'
+  export VISUAL='mvim -f'
+  alias vi='mvim -v'
+  alias vim='mvim -v'
+  alias vimdiff='mvimdiff -v'
 else
   export VISUAL='vim -v'
   alias vi='vim -v'
