@@ -99,6 +99,7 @@ plugins=(
   docker
   forklift
   git
+  github
   gitignore
   golang
   history
