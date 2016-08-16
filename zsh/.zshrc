@@ -110,6 +110,7 @@ plugins=(
   pip
   python
   ruby
+  rust
   vagrant
   virtualenvwrapper
 )
