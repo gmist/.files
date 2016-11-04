@@ -5,14 +5,14 @@
   ui = auto
 [diff]
   #tool = araxis
-  tool = vim
+  tool = mvim -v
 [merge]
   #tool = araxis
   tool = vimdiff
 [difftool]
   prompt = false
 [core]
-  editor = vi
+  editor = vim
   excludesfile = ~/.gitignore_global
   quotepath = false
 [alias]
