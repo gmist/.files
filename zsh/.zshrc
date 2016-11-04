@@ -44,19 +44,7 @@ fi
 # --end setup paths--
 
 # --begin setup virtualenvwrapper--
-export WORKON_HOME=$HOME/.ve
-if [[ "$unamestr" == "Darwin" ]]; then
-  if [ -f /usr/local/share/python/virtualenvwrapper.sh ]; then
-    source /usr/local/share/python/virtualenvwrapper.sh
-  elif [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-    source /usr/local/bin/virtualenvwrapper.sh
-  fi
-fi
-if [[ "$unamestr" == "Linux" ]]; then
-  if [ -f /etc/bash_completion.d/virtualenvwrapper ]; then
-    source /etc/bash_completion.d/virtualenvwrapper
-  fi
-fi
+export WORKON_HOME=$HOME/.venv
 # --end setup virtualenvwrapper--
 
 fpath=(/usr/local/share/zsh-completions $fpath)
