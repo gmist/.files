@@ -32,8 +32,8 @@ if [[ "$unamestr" == "Darwin" ]]; then
   alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 
   # setup GOPATH
-  export GOPATH=~/Develop/go/ext:~/Develop/go/my
-  export GOBIN=~/Develop/go/bin
+  export GOPATH=~/Dev/go
+  export GOBIN=~/Dev/go/bin
   export GOROOT=/usr/local/opt/go/libexec
   export PATH=$PATH:$GOBIN:$GOROOT/bin
 fi
