@@ -1,6 +1,6 @@
 [user]
-  name = Serg Baburin
-  email = serg.baburin@gmail.com
+	name = Serg Baburin
+	email = serg.baburin@gmail.com
 [color]
   ui = auto
 [diff]
@@ -13,7 +13,7 @@
   prompt = false
 [core]
   editor = vim
-  excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
   quotepath = false
 [alias]
   # https://github.com/garybernhardt/dotfiles/blob/master/.gitconfig
@@ -55,11 +55,11 @@
   l = !. ~/.githelpers && pretty_git_log
   la = !git l --all
 [difftool "sourcetree"]
-  cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-  path =
+	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
+	path =
 [mergetool "sourcetree"]
-  cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-  trustExitCode = true
+	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [init]
   templatedir = ~/.git_templates
 [mergetool]
@@ -72,3 +72,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[commit]
+	template = ~/.stCommitMsg
