@@ -3,5 +3,5 @@ folder = "#{Dir.home}/.commshots/"
 Dir.mkdir(folder) unless File.directory?(folder)
 file="#{folder}#{Time.now.to_i}.jpg"
 puts "Taking capture into #{file}!"
-system "imagesnap -q -w 2 #{file}"
+system "imagesnap -q -w 1 #{file}"
 exit 0
