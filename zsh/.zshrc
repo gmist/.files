@@ -75,6 +75,10 @@ ZSH_THEME="gnzh"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
+# Settings for history
+HIST_STAMPS="yyyy-mm-dd"
+HIST_IGNORE_SPACE="true"
+
 # Comment this out to disable bi-weekly auto-update checks
 DISABLE_AUTO_UPDATE="true"
 
