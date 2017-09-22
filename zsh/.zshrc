@@ -96,7 +96,6 @@ plugins=(
   golang
   history
   mercurial
-  meteor
   npm
   osx
   pip
