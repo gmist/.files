@@ -111,9 +111,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-if [ -d '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk' ]; then
-  source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+if [ -d '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk' ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
