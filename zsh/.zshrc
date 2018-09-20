@@ -28,8 +28,11 @@ if [[ "$unamestr" == "Darwin" ]]; then
   # Araxis Merge
   export PATH=/Applications/Araxis\ Merge.app/Contents/Utilities:$PATH
 
-  # SublimeText 2
+  # Sublime Text
   alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+  # Sublime Merge
+  alias smegre='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
 
   # setup GOPATH
   export GOPATH=~/Dev/go
