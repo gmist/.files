@@ -18,24 +18,17 @@ if [ "$unamestr" == "Darwin" ]; then
     brew install stow
   fi
 
-  echo "Check pip..."
-  which pip > /dev/null
-  if [ "$?" != "0" ]; then
-    echo "Oops... 'pip' was not found, install it now"
-    sudo easy_install pip
+  echo 'Install homebrewed python@2'
+  if [ ! -f /usr/local/bin/python2 ]; then
+    brew install python@2
+    /usr/local/bin/pip2 install -U pip setuptools
   fi
 
   echo "Check virtualenvwrapper..."
   which virtualenvwrapper.sh > /dev/null
   if [ "$?" != "0" ]; then
     echo "Oops... 'virtualenvwrapper' was not found, install it now"
-    if [ -f /usr/local/bin/python ]; then
-      echo "Hmm.. Python looks like homebrewed, \
-are trying to install pip without root permissions."
-      pip install virtualenvwrapper
-    else
-      sudo pip install virtualenvwrapper
-    fi
+    /usr/local/bin/pip2 install virtualenvwrapper
   fi
 
 else
@@ -65,9 +58,15 @@ if [ ! -d ~/.oh-my-zsh ]; then
   cd ~
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 else
-  echo "Update oh-my-zsh"
-  cd ~/.oh-my-zsh
-  git pull --rebase --stat origin master
+  which upgrade_oh_my_zsh > /dev/null
+  if [ "$?" != "0" ]; then
+    echo "Oops... try to update oh-my-zsh via git" 
+    cd ~/.oh-my-zsh
+    git pull --rebase --stat origin master
+  else
+    echo "Update oh-my-zsh"
+    upgrade_oh_my_zsh
+  fi
 fi
 
 
