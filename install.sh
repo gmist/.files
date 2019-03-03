@@ -45,15 +45,6 @@ else
 fi
 
 
-cd ~/.files
-for dir in */; do
-  if [ -d "$dir" ]; then
-    echo "Install ${dir}"
-    stow -t ~ $dir
-  fi
-done
-
-
 if [ ! -d ~/.oh-my-zsh ]; then
   cd ~
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
@@ -68,6 +59,15 @@ else
     upgrade_oh_my_zsh
   fi
 fi
+
+
+cd ~/.files
+for dir in */; do
+  if [ -d "$dir" ]; then
+    echo "Install ${dir}"
+    stow -t ~ $dir
+  fi
+done
 
 
 if [ ! -d ~/.ve ]; then
