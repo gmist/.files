@@ -11,6 +11,13 @@ if [ "$unamestr" == "Darwin" ]; then
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   fi
 
+  echo "Check bat..."
+  which bat > /dev/null
+  if [ "$?" != "0" ]; then
+    echo "Oops... 'bat' was not found, install it now"
+    brew install bat
+  fi
+
   echo "Check stow..."
   which stow > /dev/null
   if [ "$?" != "0" ]; then
