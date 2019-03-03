@@ -18,13 +18,6 @@ if [ "$unamestr" == "Darwin" ]; then
     brew install stow
   fi
 
-  echo "Check mercurial..."
-  which hg > /dev/null
-  if [ "$?" != "0" ]; then
-    echo "Oops... 'hg' was not found, install it now"
-    brew install mercurial
-  fi
-
   echo "Check pip..."
   which pip > /dev/null
   if [ "$?" != "0" ]; then
