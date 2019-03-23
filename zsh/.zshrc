@@ -1,8 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_DISABLE_COMPFIX=true
-
 unamestr=`uname -s`
 
 export LANG="en_US.UTF-8"
@@ -52,7 +50,7 @@ fi
 export WORKON_HOME=$HOME/.venv
 # --end setup virtualenvwrapper--
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 # --begin vim aliases--
 if [[ "$unamestr" == "Darwin" ]]; then
@@ -92,8 +90,8 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
   brew
-  brew-cask
   docker
+  docker-compose
   forklift
   git
   github
@@ -107,7 +105,6 @@ plugins=(
   python
   ruby
   rust
-  vagrant
   virtualenvwrapper
 )
 
