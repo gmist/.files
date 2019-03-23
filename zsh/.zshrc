@@ -50,7 +50,11 @@ fi
 export WORKON_HOME=$HOME/.venv
 # --end setup virtualenvwrapper--
 
-fpath=(/usr/local/share/zsh/site-functions $fpath)
+fpath=(
+	/usr/local/share/zsh-completions 
+	/usr/local/share/zsh/site-functions
+	$fpath
+)
 
 # --begin vim aliases--
 if [[ "$unamestr" == "Darwin" ]]; then
